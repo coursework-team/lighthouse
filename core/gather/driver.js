@@ -50,7 +50,7 @@ class Driver {
     this.defaultSession = throwingSession;
 
     // Poor man's Promise.withResolvers()
-    /** @param {any} _ */
+    /** @param {Error} _ */
     let rej = _ => {};
     const promise = /** @type {Promise<never>} */ (new Promise((_, theRej) => rej = theRej));
     this.fatalRejection = {promise, rej};
