@@ -44,16 +44,16 @@ describe('Metrics: Lantern Speed Index', () => {
       context);
 
     expect({
-      timing: Math.round(result.timing),
-      optimistic: Math.round(result.optimisticEstimate.timeInMs),
-      pessimistic: Math.round(result.pessimisticEstimate.timeInMs),
-    }).toMatchInlineSnapshot(`
-      Object {
-        "optimistic": 605,
-        "pessimistic": 2439,
-        "timing": 2198,
-      }
-    `);
+  timing: Math.round(result.timing),
+  optimistic: Math.round(result.optimisticEstimate.timeInMs),
+  pessimistic: Math.round(result.pessimisticEstimate.timeInMs) }).
+toMatchInlineSnapshot(`
+Object {
+  "optimistic": 605,
+  "pessimistic": 2440,
+  "timing": 2198,
+}
+`);
   });
 
   it('should not scale coefficients at default', async () => {

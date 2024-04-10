@@ -1,7 +1,7 @@
 /**
- * @license Copyright 2020 The Lighthouse Authors. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
- * Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+ * @license
+ * Copyright 2020 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
  */
 
 /* eslint-env browser */
@@ -138,7 +138,7 @@ class TreemapViewer {
 
   createBundleSelector() {
     const bundleSelectorEl = TreemapUtil.find('select.bundle-selector');
-    bundleSelectorEl.innerHTML = ''; // Clear just in case document was saved with Ctrl+S.
+    bundleSelectorEl.textContent = ''; // Clear just in case document was saved with Ctrl+S.
 
     /** @type {LH.Treemap.Selector[]} */
     const selectors = [];
@@ -428,7 +428,7 @@ class TreemapViewer {
         spacing: 10,
         caption: node => this.makeCaption(node),
       });
-      this.el.innerHTML = '';
+      this.el.textContent = '';
       this.treemap.render(this.el);
       TreemapUtil.find('.webtreemap-node').classList.add('webtreemap-node--root');
 
@@ -448,7 +448,7 @@ class TreemapViewer {
 
   createTable() {
     const tableEl = TreemapUtil.find('.lh-table');
-    tableEl.innerHTML = '';
+    tableEl.textContent = '';
 
     /** @type {Array<{node: NodeWithElement, name: string, bundleNode?: LH.Treemap.Node, resourceBytes: number, unusedBytes?: number}>} */
     const data = [];
@@ -692,7 +692,7 @@ function renderViewModeButtons(viewModes) {
   }
 
   const viewModesEl = TreemapUtil.find('.lh-modes');
-  viewModesEl.innerHTML = '';
+  viewModesEl.textContent = '';
   viewModes.forEach(render);
 }
 
@@ -792,8 +792,8 @@ class LighthouseTreemap {
     }
 
     if (treemapViewer) {
-      TreemapUtil.find('.lh-treemap').innerHTML = '';
-      TreemapUtil.find('.lh-table').innerHTML = '';
+      TreemapUtil.find('.lh-treemap').textContent = '';
+      TreemapUtil.find('.lh-table').textContent = '';
       treemapViewer.abortController.abort();
     }
     treemapViewer = new TreemapViewer(options, TreemapUtil.find('div.lh-treemap'));
@@ -929,8 +929,9 @@ async function main() {
   const app = new LighthouseTreemap();
   const queryParams = new URLSearchParams(window.location.search);
   const gzip = queryParams.get('gzip') === '1';
-  const hashParams = location.hash ?
-    JSON.parse(TextEncoding.fromBase64(location.hash.substr(1), {gzip})) :
+  const hash = window.__hash ?? location.hash;
+  const hashParams = hash ?
+    JSON.parse(TextEncoding.fromBase64(hash.substr(1), {gzip})) :
     {};
   /** @type {Record<string, any>} */
   const params = {

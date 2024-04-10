@@ -1,7 +1,7 @@
 /**
- * @license Copyright 2019 The Lighthouse Authors. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
- * Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+ * @license
+ * Copyright 2019 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
  */
 
 import a11y from './test-definitions/a11y.js';
@@ -13,10 +13,12 @@ import dbw from './test-definitions/dobetterweb.js';
 import errorsExpiredSsl from './test-definitions/errors-expired-ssl.js';
 import errorsIframeExpiredSsl from './test-definitions/errors-iframe-expired-ssl.js';
 import errorsInfiniteLoop from './test-definitions/errors-infinite-loop.js';
+import fontSize from './test-definitions/font-size.js';
 import formsAutoComplete from './test-definitions/forms-autocomplete.js';
 import fpsMax from './test-definitions/fps-max.js';
 import fpsMaxPassive from './test-definitions/fps-max-passive.js';
 import fpsScaled from './test-definitions/fps-scaled.js';
+import fpsOverflowX from './test-definitions/fps-overflow-x.js';
 import issuesMixedContent from './test-definitions/issues-mixed-content.js';
 import lanternFetch from './test-definitions/lantern-fetch.js';
 import lanternIdleCallbackLong from './test-definitions/lantern-idle-callback-long.js';
@@ -33,7 +35,6 @@ import metricsTrickyTtiLateFcp from './test-definitions/metrics-tricky-tti-late-
 import offlineOnlineOnly from './test-definitions/offline-online-only.js';
 import offlineReady from './test-definitions/offline-ready.js';
 import offlineSwBroken from './test-definitions/offline-sw-broken.js';
-import offlineSwSlow from './test-definitions/offline-sw-slow.js';
 import oopifRequests from './test-definitions/oopif-requests.js';
 import oopifScripts from './test-definitions/oopif-scripts.js';
 import perfBudgets from './test-definitions/perf-budgets.js';
@@ -45,7 +46,6 @@ import perfFonts from './test-definitions/perf-fonts.js';
 import perfFrameMetrics from './test-definitions/perf-frame-metrics.js';
 import perfPreload from './test-definitions/perf-preload.js';
 import perfTraceElements from './test-definitions/perf-trace-elements.js';
-import pubads from './test-definitions/pubads.js';
 import pwaAirhorner from './test-definitions/pwa-airhorner.js';
 import pwaCaltrain from './test-definitions/pwa-caltrain.js';
 import pwaChromestatus from './test-definitions/pwa-chromestatus.js';
@@ -53,6 +53,7 @@ import pwaRocks from './test-definitions/pwa-rocks.js';
 import pwaSvgomg from './test-definitions/pwa-svgomg.js';
 import redirectsClientPaintServer from './test-definitions/redirects-client-paint-server.js';
 import redirectsHistoryPushState from './test-definitions/redirects-history-push-state.js';
+import redirectsHttp from './test-definitions/redirects-http.js';
 import redirectsMultipleServer from './test-definitions/redirects-multiple-server.js';
 import redirectsScripts from './test-definitions/redirects-scripts.js';
 import redirectsSelf from './test-definitions/redirects-self.js';
@@ -62,7 +63,8 @@ import screenshot from './test-definitions/screenshot.js';
 import seoFailing from './test-definitions/seo-failing.js';
 import seoPassing from './test-definitions/seo-passing.js';
 import seoStatus403 from './test-definitions/seo-status-403.js';
-import seoTapTargets from './test-definitions/seo-tap-targets.js';
+import serviceWorkerReloaded from './test-definitions/service-worker-reloaded.js';
+import shiftAttribution from './test-definitions/shift-attribution.js';
 import sourceMaps from './test-definitions/source-maps.js';
 import timing from './test-definitions/timing.js';
 
@@ -77,10 +79,12 @@ const smokeTests = [
   errorsExpiredSsl,
   errorsIframeExpiredSsl,
   errorsInfiniteLoop,
+  fontSize,
   formsAutoComplete,
   fpsMax,
-  fpsScaled,
   fpsMaxPassive,
+  fpsOverflowX,
+  fpsScaled,
   issuesMixedContent,
   lanternFetch,
   lanternIdleCallbackLong,
@@ -97,7 +101,6 @@ const smokeTests = [
   offlineOnlineOnly,
   offlineReady,
   offlineSwBroken,
-  offlineSwSlow,
   oopifRequests,
   oopifScripts,
   perfBudgets,
@@ -109,7 +112,6 @@ const smokeTests = [
   perfFrameMetrics,
   perfPreload,
   perfTraceElements,
-  pubads,
   pwaAirhorner,
   pwaCaltrain,
   pwaChromestatus,
@@ -117,6 +119,7 @@ const smokeTests = [
   pwaSvgomg,
   redirectsClientPaintServer,
   redirectsHistoryPushState,
+  redirectsHttp,
   redirectsMultipleServer,
   redirectsScripts,
   redirectsSelf,
@@ -126,7 +129,8 @@ const smokeTests = [
   seoFailing,
   seoPassing,
   seoStatus403,
-  seoTapTargets,
+  serviceWorkerReloaded,
+  shiftAttribution,
   sourceMaps,
   timing,
 ];
