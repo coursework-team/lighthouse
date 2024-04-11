@@ -22,7 +22,7 @@ class Interactive extends Metric {
     return {
       intercept: 0,
       optimistic: 0.45,
-      pessimistic: 0.45,
+      pessimistic: 0.55,
     };
   }
 
