@@ -275,9 +275,9 @@
             "description": "Time to Interactive is the amount of time it takes for the page to become fully interactive. [Learn more about the Time to Interactive metric](https://developer.chrome.com/docs/lighthouse/performance/interactive/).",
             "score": 0.99,
             "scoreDisplayMode": "numeric",
-            "numericValue": 2132.16606,
+            "numericValue": 2369.0734,
             "numericUnit": "millisecond",
-            "displayValue": "2.1 s"
+            "displayValue": "2.4 s"
           },
           "user-timings": {
             "id": "user-timings",
@@ -1349,7 +1349,7 @@
             "description": "Collects all available metrics.",
             "score": 1,
             "scoreDisplayMode": "informative",
-            "numericValue": 2132,
+            "numericValue": 2369,
             "numericUnit": "millisecond",
             "details": {
               "type": "debugdata",
@@ -1358,7 +1358,7 @@
                   "firstContentfulPaint": 1372,
                   "firstMeaningfulPaint": 1372,
                   "largestContentfulPaint": 1372,
-                  "interactive": 2132,
+                  "interactive": 2369,
                   "speedIndex": 1372,
                   "totalBlockingTime": 143,
                   "maxPotentialFID": 193,
@@ -7037,7 +7037,7 @@
               },
               {
                 "values": {
-                  "timeInMs": 2132.16606
+                  "timeInMs": 2369.0734
                 },
                 "path": "audits.interactive.displayValue"
               },
@@ -17821,7 +17821,7 @@
             "description": "Time to Interactive is the amount of time it takes for the page to become fully interactive. [Learn more about the Time to Interactive metric](https://developer.chrome.com/docs/lighthouse/performance/interactive/).",
             "score": 1,
             "scoreDisplayMode": "numeric",
-            "numericValue": 866.7026,
+            "numericValue": 931.0526,
             "numericUnit": "millisecond",
             "displayValue": "0.9 s"
           },
@@ -18859,7 +18859,7 @@
             "description": "Collects all available metrics.",
             "score": 1,
             "scoreDisplayMode": "informative",
-            "numericValue": 867,
+            "numericValue": 931,
             "numericUnit": "millisecond",
             "details": {
               "type": "debugdata",
@@ -18868,7 +18868,7 @@
                   "firstContentfulPaint": 867,
                   "firstMeaningfulPaint": 867,
                   "largestContentfulPaint": 1803,
-                  "interactive": 867,
+                  "interactive": 931,
                   "speedIndex": 867,
                   "totalBlockingTime": 13,
                   "maxPotentialFID": 76,
@@ -24590,7 +24590,7 @@
               },
               {
                 "values": {
-                  "timeInMs": 866.7026
+                  "timeInMs": 931.0526
                 },
                 "path": "audits.interactive.displayValue"
               },

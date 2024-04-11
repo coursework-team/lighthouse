@@ -18,6 +18,8 @@ class SpeedIndex extends Metric {
    */
   static get COEFFICIENTS() {
     return {
+      // Note that the optimistic estimate is based on the real observed speed index rather than a
+      // real lantern graph (and the final estimate will be Math.max(FCP, Speed Index)).
       intercept: 0,
       optimistic: 1.4,
       pessimistic: 0.4,
